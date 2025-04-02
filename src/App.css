@@ -5,3 +5,17 @@
     --font-montserrat: "Montserrat", "sans-serif";
 }
 
+@layer base {
+    html {
+        @apply bg-black;
+    }
+
+    body {
+        @apply font-montserrat text-white
+    }
+}
+
+.bg-gradient-image {
+    background-image: url('/public/BG-downloads.webp');
+  }
+  
