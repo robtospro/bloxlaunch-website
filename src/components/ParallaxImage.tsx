@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 
-export default function ParallaxImage({ src, alt, className }) {
+export default function ParallaxImage({
+                                        src,
+                                        alt,
+                                        className = '',
+                                        offsetPos = 0,
+                                        style = {},          // ← new
+                                      }) {
   const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setOffsetY(window.scrollY);
-    };
-
+    const handleScroll = () => setOffsetY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -18,9 +21,10 @@ export default function ParallaxImage({ src, alt, className }) {
       alt={alt}
       className={className}
       style={{
+        position: 'absolute',               // ← ensure absolute
         willChange: 'transform',
-        transform: `translate3d(0, ${offsetY * -0.2}px, 0)`,
-        transformStyle: 'preserve-3d',
+        transform: `translate3d(0, ${offsetY * offsetPos}px, 0)`,
+        ...style,                           // ← apply custom top/left
       }}
     />
   );
