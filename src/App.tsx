@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Feature from "./components/feature";
-import ParallaxImage from './components/ParallaxImage';
+import Feature from "./components/Feature";
+// import ParallaxImage from './components/ParallaxImage';
 
 import { FaFeatherAlt, FaUser, FaGithub, FaQuestion, FaWindows } from 'react-icons/fa';
 import { FaMagnifyingGlass } from "react-icons/fa6";
