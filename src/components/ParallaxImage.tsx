@@ -1,4 +1,4 @@
-import React, { useEffect, useState, CSSProperties } from 'react';
+import { useEffect, useState, CSSProperties } from 'react';
 
 export interface ParallaxImageProps {
   /** Image source URL */

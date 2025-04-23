@@ -3,22 +3,22 @@ import { useEffect, useState } from 'react';
 import Feature from "./components/Feature";
 // import ParallaxImage from './components/ParallaxImage';
 
-import { FaFeatherAlt, FaUser, FaGithub, FaQuestion, FaWindows } from 'react-icons/fa';
+import {FaFeatherAlt, FaUser, FaGithub, FaWindows, FaLock} from 'react-icons/fa';
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { IoImage } from "react-icons/io5";
+import {IoExtensionPuzzle} from "react-icons/io5";
 
-// Type for GitHub release asset
-interface GitHubReleaseAsset {
-  name: string;
-  size: number;
-  browser_download_url: string;
-}
-
-// Type for GitHub release response
-interface GitHubRelease {
-  tag_name: string;
-  assets: GitHubReleaseAsset[];
-}
+// // Type for GitHub release asset
+// interface GitHubReleaseAsset {
+//   name: string;
+//   size: number;
+//   browser_download_url: string;
+// }
+//
+// // Type for GitHub release response
+// interface GitHubRelease {
+//   tag_name: string;
+//   assets: GitHubReleaseAsset[];
+// }
 
 function App() {
   const [latestVersion, setLatestVersion] = useState<string | null>(null);
@@ -105,21 +105,21 @@ function App() {
 
 
         <div className='mt-12 mb-12 grid grid-cols-1 xl:grid-cols-2 gap-4'>
-          <Feature title="Lightweight" description="The app is 4mb" icon={FaFeatherAlt}/>
-          <Feature title="Open-source" description="placeholder" icon={FaGithub}/>
-          <Feature title="Search" description="Search any roblox game" icon={FaMagnifyingGlass}/>
-          <Feature title="Account Free" description="No need to login" icon={FaUser}/>
-          <Feature title="Compatible" description="Works with Bloxstrap, Fishstrap" icon={IoImage}/>
-          <Feature title="Private Server" description="Quick access to yours and others private servers"
-                   icon={FaQuestion}/>
+          <Feature title="Lightweight" description="Bloxlaunch takes up only 7MB of space." icon={FaFeatherAlt}/>
+          <Feature title="Open-source" description="The code for Bloxlaunch is available at https://github.com/bloxlaunch/app" icon={FaGithub}/>
+          <Feature title="Search" description="Search any Roblox game inside Bloxlaunch." icon={FaMagnifyingGlass}/>
+          <Feature title="Account Free" description="No need to login to use." icon={FaUser}/>
+          <Feature title="Compatible" description="Works with Bloxstrap, Fishstrap." icon={IoExtensionPuzzle}/>
+          <Feature title="Private Server" description="Quick access to yours and others private servers."
+                   icon={FaLock}/>
         </div>
       </div>
-      <div className={"w-full bg-white/0 h-[75px] border-t border-white/10 flex justify-center overflow-hidden"}>
-        <div className={"bg-white/0 h-full w-full lg:w-[1000px] flex"}>
-          <div className={"bg-white/30 w-1/2"}></div>
-          <div className={"bg-white/25 w-1/2 select-none flex content-center"}><p>Copyright &copy; 2025 RobTosPro</p> </div>
-        </div>
-      </div>
+      {/*<div className={"w-full bg-white/0 h-[75px] border-t border-white/10 flex justify-center overflow-hidden"}>*/}
+      {/*  <div className={"bg-white/0 h-full w-full lg:w-[1000px] flex"}>*/}
+      {/*    <div className={"bg-white/30 w-1/2"}></div>*/}
+      {/*    <div className={"bg-white/25 w-1/2 select-none flex content-center"}><p>Copyright &copy; 2025 RobTosPro</p> </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </>
   );
 }
