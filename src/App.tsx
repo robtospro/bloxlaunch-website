@@ -1,4 +1,7 @@
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import { useEffect, useState } from 'react';
 import Feature from "./components/Feature";
 // import ParallaxImage from './components/ParallaxImage';
@@ -55,6 +58,8 @@ function App() {
 
   return (
     <>
+      <Analytics/>
+      <SpeedInsights/>
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10 bg-gradient-image bg-cover bg-center bg-no-repeat hue-rotate-180 saturate-200 sm:h-[400px] md:h-[600px] lg:h-[800px]" />
       <div className="container flex mx-auto p-5 items-center flex-col">
         <img className='pt-15 mb-6 w-[800px] select-none' src="/Bloxlaunch-Logo.svg" alt="Bloxlaunch Logo"/>
