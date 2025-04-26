@@ -63,7 +63,7 @@ function App() {
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10 bg-gradient-image bg-cover bg-center bg-no-repeat hue-rotate-180 saturate-200 sm:h-[400px] md:h-[600px] lg:h-[800px]" />
       <div className="container flex mx-auto p-5 items-center flex-col">
         <img className='pt-15 mb-6 w-[800px] select-none' src="/Bloxlaunch-Logo.svg" alt="Bloxlaunch Logo"/>
-        <h1 className="font-semibold px-2 text-4xl select-none">The Faster Roblox Launcher</h1>
+        <h1 className="font-semibold px-2 text-4xl select-none text-center">The Faster Roblox Launcher</h1>
         <p className={"text-xl font-normal select-none"}>Play your favourite games instantly</p>
 
         <a
